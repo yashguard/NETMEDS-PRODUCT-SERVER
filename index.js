@@ -19,7 +19,6 @@ server.get("/", (req, res) => {
 
 server.get("/covid", async (req, res) => {
   const products = await covid.find();
-  console.log(products);
   res.send(products);
 });
 
@@ -38,10 +37,10 @@ server.get("/treatments", async (req, res) => {
   res.send(products);
 });
 
-server.post("/add", async (req, res) => {
-  covid.create(req.body);
-  res.send("Successfully added");
-});
+// server.post("/add", async (req, res) => {
+//   treatments.create(req.body);
+//   res.send("Successfully added");
+// });
 
 server.listen(port, () => {
   console.log(`Server is running`);

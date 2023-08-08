@@ -42,7 +42,7 @@ server.get("/treatments", async (req, res) => {
 //   res.send("Successfully added");
 // });
 
-server.listen(port, () => {
+server.listen(8010, () => {
   console.log(`Server is running`);
   connect();
 });
